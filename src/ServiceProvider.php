@@ -74,6 +74,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->registerBladeDirective('async-widget', '$1<?php echo app("arrilot.async-widget")->run$2; ?>');
         $this->registerBladeDirective('asyncWidget', '$1<?php echo app("arrilot.async-widget")->run$2; ?>');
         $this->registerBladeDirective('widgetGroup', '$1<?php echo  app("arrilot.widget-group-collection")->group$2->display(); ?>');
+        $this->registerBladeDirective('widget-begin', '$1<?php echo app("arrilot.widget")->begin$2; ?>');
+        $this->registerBladeDirective('widget-end', '$1<?php echo app("arrilot.widget")->endw$2; ?>');
     }
 
     /**
