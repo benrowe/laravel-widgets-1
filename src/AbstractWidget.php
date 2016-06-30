@@ -2,7 +2,9 @@
 
 namespace Arrilot\Widgets;
 
-abstract class AbstractWidget
+use Arrilot\Widgets\Contracts\Widget;
+
+abstract class AbstractWidget implements Widget
 {
     /**
      * The number of seconds before each reload.
