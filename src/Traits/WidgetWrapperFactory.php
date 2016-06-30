@@ -17,8 +17,8 @@ trait WidgetWrapperFactory
      *
      * @param  array $args
      * @return void
-     */
-    abstract protected function instantiateWidget($args);
+     */ 
+    abstract protected function instantiateWidget(array $args = []);
 
     /**
      * Retrieve the widget as an expression of Html

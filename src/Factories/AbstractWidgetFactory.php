@@ -170,7 +170,7 @@ abstract class AbstractWidgetFactory
         return '<'.$container['element'].' id="'.$this->javascriptFactory->getContainerId().'" '.$container['attributes'].'>'.$content.'</'.$container['element'].'>';
     }
 
-    protected function asExpression()
+    protected function asExpression($html)
     {
         return new Expression($html, $this->widget);
     }
