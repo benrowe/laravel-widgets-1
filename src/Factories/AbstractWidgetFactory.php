@@ -124,6 +124,19 @@ abstract class AbstractWidgetFactory
     }
 
     /**
+     * Instanciate the widget, based on the provided configuration
+     * and return the instance of the widget
+     *
+     * @param  array $params widget parameters
+     * @return AbstractWidget
+     */
+    public function initWidget(array $params = [])
+    {
+        $this->instantiateWidget($params);
+        return $this->widget;
+    }
+
+    /**
      * Convert stuff like 'profile.feedWidget' to 'Profile\FeedWidget'.
      *
      * @param $widgetName
