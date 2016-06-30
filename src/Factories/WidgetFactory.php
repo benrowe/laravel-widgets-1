@@ -2,8 +2,13 @@
 
 namespace Arrilot\Widgets\Factories;
 
+use Arrilot\Widgets\Expression;
+use Arrilot\Widgets\Traits\WidgetWrapperFactory;
+
 class WidgetFactory extends AbstractWidgetFactory
 {
+    use WidgetWrapperFactory;
+
     /**
      * Run widget without magic method.
      *
