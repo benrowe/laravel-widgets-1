@@ -7,6 +7,7 @@ use Arrilot\Widgets\Contracts\ApplicationWrapperContract;
 use Arrilot\Widgets\Misc\InvalidWidgetClassException;
 use Arrilot\Widgets\Misc\ViewExpressionTrait;
 use Arrilot\Widgets\WidgetId;
+use Arrilot\Widgets\Expression;
 
 abstract class AbstractWidgetFactory
 {
@@ -167,5 +168,10 @@ abstract class AbstractWidgetFactory
         }
 
         return '<'.$container['element'].' id="'.$this->javascriptFactory->getContainerId().'" '.$container['attributes'].'>'.$content.'</'.$container['element'].'>';
+    }
+
+    protected function asExpression()
+    {
+        return new Expression($html, $this->widget);
     }
 }
