@@ -71,10 +71,9 @@ trait WidgetWrapperFactory
      *
      * @param  AbstractWidget $widget [description]
      * @return boolean                [description]
-     * @todo implement logic
      */
     private function isWidgetWrapper(AbstractWidget $widget)
     {
-        return true;
+        return $widget instanceof \Arrilot\Widgets\Contracts\Wrapper;
     }
 }
